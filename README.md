@@ -1,50 +1,141 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# CardioInsight
 
-## React Compiler
+**AI‑Driven Heart Failure Mortality Risk Assessment Platform**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+CardioInsight is a healthcare analytics web application designed to assess and present heart failure mortality risk using clinically interpretable insights. The project combines modern web technologies with data‑driven thinking to support informed clinical decision‑making.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Project Overview
 
-## Analysis Notebook & Report
+Heart failure is a critical condition requiring timely and accurate risk assessment. **CardioInsight** provides:
 
-- A Colab notebook `colab_heart_failure_analysis.ipynb` is included at the project root. Run it in Google Colab to reproduce the analysis, generate plots and a short insight report.
-- The notebook outputs files in an `outputs/` folder (when run): `summary_chart.png`, `insight_report.md`, and other diagnostic plots.
-- To update the website with real outputs:
-	1. Run the notebook in Google Colab (open the `.ipynb` file and Run All). If you install SHAP in Colab, restart the runtime when prompted.
-	2. Download `outputs/summary_chart.png` and `outputs/insight_report.md`.
-	3. Place the chart in `public/assets/images/` (replace `summary_chart.svg`) and update `public/insight_report.html` or replace its content with the markdown-to-HTML conversion of `insight_report.md`.
+* Clear presentation of risk‑related insights
+* Clinically meaningful interpretation of results
+* Interactive and user‑friendly visualizations
 
-Quick Colab install (optional) — run in Colab cell 1 if needed:
-```python
-!pip install -q shap plotly matplotlib seaborn joblib scikit-learn
+This project is suitable for **academic evaluation, hackathons, and portfolio demonstration**.
+
+---
+
+## 🧠 Key Features
+
+* 🫀 Heart failure risk analytics dashboard
+* 📊 Visual representation of patient data and model results
+* 🧾 Consultation request form with validation
+* 🎨 Clean and responsive UI using Tailwind CSS
+* ⚡ Fast performance with Vite + React
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **React.js** (Component‑based UI)
+* **Vite** (Fast development server)
+* **Tailwind CSS** (Utility‑first styling)
+* **Recharts** (Data visualization)
+
+### Tooling
+
+* Git & GitHub (Version control)
+* PostCSS & Autoprefixer
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Results.jsx
+│   ├── Visuals.jsx
+│   ├── Consultation.jsx
+│   └── Footer.jsx
+├── assets/
+│   └── heart.jpg
+├── index.css
+├── main.jsx
+└── App.jsx
 ```
 
-Colab notebook (link): https://colab.research.google.com/drive/1jACyeDgfPhRlNVxUDrIUNJ3CjBuP4qRb?usp=sharing
+---
 
-## Submission Checklist
+## ⚙️ Installation & Setup
 
-1. Run the analysis notebook in Google Colab: `colab_heart_failure_analysis.ipynb` and Run All.
-2. Download `outputs/summary_chart.png` and `outputs/insight_report.md`.
-3. Replace `public/assets/images/summary_chart.svg` with `summary_chart.png` (rename to `summary_chart.png`).
-4. Convert `insight_report.md` to HTML (or paste contents into `public/insight_report.html`).
-5. Run the site locally to verify:
+### 1️⃣ Clone the repository
 
-```powershell
-cd "C:\Users\Dell\Desktop\heart-failure-website\heart-failure-website"
+```bash
+git clone https://github.com/Aadya242005/CardioInsight.git
+cd CardioInsight
+```
+
+### 2️⃣ Install dependencies
+
+```bash
 npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
 npm run dev
 ```
 
-6. Open `http://localhost:5173` (or the Vite URL) and verify the Analysis page and Report link.
+The app will run at: **[http://localhost:5173](http://localhost:5173)**
 
-If you want me to run the notebook and patch the real outputs into the site, reply `patch outputs` and I'll do it (I will need the notebook to run successfully in this environment or you can run in Colab and upload the generated files here).
+---
+
+## 🧪 Usage
+
+* Explore the **Hero and About** sections to understand the study
+* Review **Results & Visuals** for model performance insights
+* Use the **Consultation** form for simulated clinician requests
+
+---
+
+## 📸 Screenshots (Optional)
+
+*Add screenshots here once deployed or finalized.*
+
+---
+
+## 🎯 Future Enhancements
+
+* Integration with ML backend (API‑based predictions)
+* Authentication for clinicians
+* Patient‑level risk scoring
+* Deployment on Netlify / Vercel
+
+---
+
+## 👩‍💻 Author
+
+**Aadya Sharma**
+GitHub: [Aadya242005](https://github.com/Aadya242005)
+
+---
+
+## 📜 License
+
+This project is for **educational and research purposes**.
+Not intended for real‑world clinical diagnosis or emergency use.
+
+---
+
+⭐ If you like this project, don’t forget to star the repository!
+
+
+
+
+
+
+
+
