@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for in-page navigation and offset to account for fixed navbar */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 72px; /* adjust if navbar height changes */
+}
+
+/* Small visual tweak for mobile nav open state (optional) */
+.nav-backdrop {
+	background: rgba(0,0,0,0.3);
+}
+
+/* Mobile menu scale animation */
+.mobile-menu {
+	transform-origin: top;
+	transition: transform .18s ease-out, opacity .18s ease-out;
+}
+.mobile-menu.closed {
+	transform: scaleY(0);
+	opacity: 0;
+	pointer-events: none;
+}
+.mobile-menu.open {
+	transform: scaleY(1);
+	opacity: 1;
+}
+
+/* Skip link styles */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: 100;
+}
+.skip-link:focus {
+	left: 10px;
+	top: 10px;
+	width: auto;
+	height: auto;
+	padding: 8px 12px;
+	background: #111827;
+	color: white;
+	border-radius: 4px;
+	z-index: 1000;
+}
+
+/* Navbar shrink */
+.nav-shrink {
+	padding-top: 6px !important;
+	padding-bottom: 6px !important;
+}
+
+/* Progress bar under navbar */
+.nav-progress {
+	position: fixed;
+	left: 0;
+	top: 64px; /* below navbar */
+	height: 3px;
+	width: 100%;
+	background: transparent;
+	z-index: 60;
+}
+.nav-progress > .bar {
+	height: 100%;
+	width: 0%;
+	background: linear-gradient(90deg,#4f46e5,#06b6d4);
+	transition: width 120ms linear;
+}
+
+/* KPI card polish */
+.kpi-card { transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s; }
+.kpi-card:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(16,24,40,0.08); }
+.kpi-value { font-weight: 700; font-size: 1.5rem; color: #1e3a8a; }
+.kpi-metric { color: #111827; font-size: 1.125rem; }
+
+/* Simple fade-in for KPI grid */
+.kpi-grid > * { opacity: 0; transform: translateY(10px); animation: kpiFade 420ms ease forwards; }
+@keyframes kpiFade { to { opacity: 1; transform: translateY(0); } }
+

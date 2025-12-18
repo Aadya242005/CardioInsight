@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insight Report — Heart Failure Mortality Prediction</title>
+    <style>
+      body { font-family: 'Segoe UI', Arial, sans-serif; color:#111827; margin:24px }
+      h1 { font-size:22px }
+      .container { max-width:900px }
+      .chart { margin: 18px 0 }
+      .section { margin: 12px 0 }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Insight Report — Heart Failure Mortality Prediction</h1>
+      <p><strong>Dataset:</strong> Heart Failure Clinical Records (UCI)</p>
+      <div class="chart">
+        <img src="/assets/images/summary_chart.svg" alt="Top predictors" style="max-width:100%; height:auto; border-radius:6px;"/>
+      </div>
+
+      <div class="section">
+        <h2>Models</h2>
+        <p>Two models were prepared: Logistic Regression and Random Forest. Random Forest generally gives stronger ROC-AUC on this dataset and is used for feature importance.</p>
+      </div>
+
+      <div class="section">
+        <h2>Top Predictive Features (summary)</h2>
+        <ul>
+          <li>Age — older age is associated with higher risk of mortality.</li>
+          <li>Serum Creatinine — marker of renal function; higher values predict worse outcomes.</li>
+          <li>Ejection Fraction — lower EF indicates poorer cardiac function.</li>
+          <li>Platelets — may reflect comorbid conditions and inflammation.</li>
+          <li>Serum Sodium — abnormalities correlate with heart failure severity.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Clinical Interpretation</h2>
+        <p>The model highlights well-established clinical risk factors. These features could be used to prioritize patients for more intensive monitoring or early interventions.</p>
+      </div>
+
+      <div class="section">
+        <h2>How to replace with real outputs</h2>
+        <p>Run <code>colab_heart_failure_analysis.ipynb</code> in Google Colab and copy the generated files from the notebook `outputs/` folder to this project's <code>public/assets/images/</code> and replace <code>summary_chart.svg</code> with the produced PNG. You can also edit this HTML to include actual numeric results and ROC plots.</p>
+      </div>
+    </div>
+  </body>
+ </html>
