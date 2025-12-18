@@ -131,6 +131,8 @@ Not intended for real‑world clinical diagnosis or emergency use.
 ---
 
 ⭐ If you like this project, don’t forget to star the repository!
+Deployed link is:
+🔗 https://cardio-insight.vercel.app
 
 
 
